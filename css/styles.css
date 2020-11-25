@@ -150,7 +150,6 @@ line-height: 1.2;
   background-color: var(--effect-color);
   color: var(--primary-white-color);
   outline: none;
-  border: 1px solid var(--effect-color);
 }
 
 /* buttons that contain call to action - order, submit, send */
@@ -162,8 +161,15 @@ text-align: center;
 letter-spacing: 0.06em;
 min-width: 200px;
 height: 50px;
+/* transition-property: background-color, color; */
+transition-duration: 250ms;
+ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.button.call:hover,
+.button.call:focus{
+transform: scale(0.9);
+}
 
 
 /*================= titles =================*/
@@ -802,9 +808,9 @@ margin-bottom: 4px;
   height: 50px;
   padding: 10px 55px;
   display: block;
-   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
-  0px 1px 1px rgba(0, 0, 0, 0.14),
-   0px 2px 1px rgba(0, 0, 0, 0.2);
+ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   margin:0 auto;
   margin-top: 30px;
@@ -817,7 +823,7 @@ margin-bottom: 4px;
  .form.button.call:focus{ 
  box-shadow: 4px 1px 27px 2px rgba(0,0,0,0.36);
  outline: none;
- border: 1px solid var(--effect-color);
+ 
  }
 
  .modal-form-input {
@@ -1069,6 +1075,5 @@ fill: var(--primary-white-color)
 
 .subscribe.button:focus,
 .subscribe.button:hover {
-outline: none;
-border: 1px solid var(--effect-color);
-}
+transform: scale(0.9);
+} 
