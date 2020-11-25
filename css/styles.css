@@ -149,6 +149,8 @@ line-height: 1.2;
 .button.secundary:focus {
   background-color: var(--effect-color);
   color: var(--primary-white-color);
+  outline: none;
+  border: 1px solid var(--effect-color);
 }
 
 /* buttons that contain call to action - order, submit, send */
@@ -767,6 +769,12 @@ margin-bottom: 4px;
   } 
 
 
+  .modal-close-button:hover,
+  .modal-close-button:focus{
+    outline: none;
+    }
+
+
   .modal-form {
   display: flex;
   flex-direction: column;
@@ -808,6 +816,8 @@ margin-bottom: 4px;
  .form.button.call:hover,
  .form.button.call:focus{ 
  box-shadow: 4px 1px 27px 2px rgba(0,0,0,0.36);
+ outline: none;
+ border: 1px solid var(--effect-color);
  }
 
  .modal-form-input {
@@ -1024,7 +1034,7 @@ fill: var(--primary-white-color)
 }
 
 .suscribe-email-input:focus{
-  border:none;
+  outline:none;
   border: 1px solid  rgba(255, 255, 255, 0.6);
   border-radius: 4px;
 }
@@ -1056,3 +1066,9 @@ fill: var(--primary-white-color)
   right:28px;
 }
 
+
+.subscribe.button:focus,
+.subscribe.button:hover {
+outline: none;
+border: 1px solid var(--effect-color);
+}
